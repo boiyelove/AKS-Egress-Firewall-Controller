@@ -2,6 +2,19 @@
 
 Make every AKS outbound path explicit, inspected, observable, and testable.
 
+## Project metadata
+
+The metadata below is derived from tracked source, manifests, and infrastructure
+files. It describes what this repository includes; live-service integration remains
+bounded by the documented deployment and validation limitations.
+
+| Category | Included |
+| --- | --- |
+| Platforms | Microsoft Azure; GitHub Actions; Kubernetes |
+| Services and stack | AKS; Firewall Premium; UDR; NAT Gateway; Azure Monitor |
+| Languages and formats | Python; Bicep; Bicep parameters; Bash; JSON; YAML |
+| Delivery and IaC | Bicep + `.bicepparam`; GitHub Actions CI; Kubernetes/YAML manifests; Python validation/tests |
+
 ## Problem statement
 
 A workload egress intent is validated and converted into a deterministic route and allow-list plan for AKS, UDR, and Firewall Premium adapters.
