@@ -41,6 +41,14 @@ tests cannot claim a live cloud change occurred.
 
 The upper boundary names the principal services and technologies used by this repository. The lower boundary shows the implemented control flow: desired state is validated, provider action remains an explicit integration gate, and sanitized evidence is retained for review and deterministic replay.
 
+## Best complementary diagram
+
+**Recommended view: Workload egress packet-path topology.** A topology view is the strongest complement because it makes network and identity boundaries, enforcement hops, and the governed path physically legible.
+
+![Icon-based workload egress packet-path topology for AKS-Egress-Firewall-Controller](docs/operational-view.svg)
+
+The view follows **Pod initiates connection → Apply namespace policy → Inspect through firewall → Reach approved destination**. Use it during design reviews, operational walkthroughs, and failure-mode discussions; use the logical architecture above when the question is which technologies integrate.
+
 ## Quickstart
 
 Requirements: Python 3.11+ and Git. No Azure credentials are required.
